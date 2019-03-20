@@ -1,0 +1,6 @@
+FROM golang
+
+RUN go get github.com/masterzen/winrm
+COPY foobar.go /go/src/foobar/foobar.go
+RUN cd /go/src/foobar &&\
+        go build
